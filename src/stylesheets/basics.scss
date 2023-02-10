@@ -16,11 +16,13 @@ h1 {
   }
 }
 p {
+  margin: 0;
+  box-sizing: border-box;
+  width: fit-content;
   font-family: 'Times New Roman';
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.8vw;
   line-height: 40px;
+  white-space: nowrap;
 }
 a {
   color: black;
