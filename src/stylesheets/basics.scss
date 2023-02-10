@@ -28,3 +28,33 @@ a {
   color: black;
   cursor: pointer;
 }
+#cursorGround {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  pointer-events: none;
+  left: 0%;
+  mix-blend-mode: difference;
+  div {
+    pointer-events: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    &.hidden {
+      display: none;
+    }
+    .cursorText {
+      white-space: nowrap;
+      position: absolute;
+      font-size: 2vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+
+      text-decoration: underline;
+    }
+  }
+}
