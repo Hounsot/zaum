@@ -45,6 +45,10 @@ a {
     &.hidden {
       display: none;
     }
+    &.hiddenError {
+      display: none;
+    }
+
     .cursorText {
       white-space: nowrap;
       position: absolute;
@@ -55,6 +59,21 @@ a {
       color: white;
 
       text-decoration: underline;
+    }
+    .error {
+      color: rgb(255, 0, 0);
+
+      .cursorText {
+        white-space: nowrap;
+        position: absolute;
+        font-size: 2vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 0, 0);
+
+        text-decoration: underline;
+      }
     }
   }
 }
