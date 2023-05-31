@@ -19,6 +19,11 @@ body {
   top: 0;
   background-color: var(--color);
 }
+// .O_Footer {
+//   display: flex;
+//   background-color: white;
+//   height: 100vh;
+// }
 .A_Text {
   font-family: 'Suisse Intl';
   color: white;
@@ -38,7 +43,22 @@ body {
   height: calc(100vh - var(--headerHeight));
   padding-bottom: 24px;
 }
+.W_Links {
+  display: flex;
+  flex-direction: column;
+}
+.W_Desciption {
+  background-color: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .M_Title {
+    justify-content: center;
+    align-self: center;
+  }
+}
 .M_Info {
+  font-family: helvetica;
   position: relative;
   width: 100%;
   height: var(--headerHeight);
@@ -47,6 +67,19 @@ body {
   color: white;
   border-bottom: 1px solid white;
   padding: 10px 0 10px;
+  &:hover {
+    background-color: white;
+    color: black;
+    .A_Text {
+      color: black;
+    }
+  }
+}
+.W_Sub {
+  justify-content: flex-end;
+  align-self: end;
+  position: relative;
+  width: 70%;
 }
 .M_InfoAbout {
   position: relative;
@@ -66,6 +99,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-bottom: 24px;
+  &.W_ProjectLayout {
+    padding-top: 0;
+  }
 }
 .W_FourByFourGrid {
   display: grid;
@@ -96,8 +133,8 @@ body {
   overflow: hidden;
 }
 .A_VerticalRight {
+  max-height: 47vw;
   background-color: white;
-  max-height: 100%;
   max-width: 100%;
   display: flex;
   grid-area: UpperRight / UpperRight / BottomRight / BottomRight;
@@ -132,9 +169,12 @@ body {
   overflow: hidden;
 }
 .A_FullScreen {
-  background-color: white;
+  // background-color: white;
   max-height: 100%;
   max-width: 100%;
   grid-area: UpperLeft/BottomLeft/BottomLeft/BottomRight;
   overflow: hidden;
+}
+.U_Hidden {
+  display: none;
 }
