@@ -178,3 +178,10 @@ body {
 .U_Hidden {
   display: none;
 }
+.U_Active {
+  background-color: white;
+  color: black;
+  .A_Text {
+    color: black;
+  }
+}
