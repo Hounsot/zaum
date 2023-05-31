@@ -9,7 +9,9 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
-    nav: './src/main.js'
+    projects: './src/projects.js',
+    nav: './src/main.js',
+    zagum: './src/zagum.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -98,7 +100,49 @@ module.exports = {
     // Index
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/bozhemoy.html',
+      filename: './projects/bozhemoy.html',
+      chunks: ['projects']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/kursiv.html',
+      filename: './projects/kursiv.html',
+      chunks: ['projects']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/zeitgeist.html',
+      filename: './projects/zeitgeist.html',
+      chunks: ['projects']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/teni.html',
+      filename: './projects/teni.html',
+      chunks: ['projects']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/stena.html',
+      filename: './projects/stena.html',
+      chunks: ['projects']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/logos.html',
+      filename: './projects/logos.html',
+      chunks: ['projects']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects/hypnos.html',
+      filename: './projects/hypnos.html',
+      chunks: ['projects']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/zagum.html',
+      filename: './zagum.html',
+      chunks: ['zagum']
     })
 
     // Article

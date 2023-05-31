@@ -1,220 +1,187 @@
-body.main {
-  width: calc(100% - 44px);
-  margin: 1vw auto;
-  background-color: white;
-  img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: var(--color);
+  padding: 0px 24px;
+}
+.O_Header {
+  height: var(--headerHeight);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px;
+  position: sticky;
+  top: 0;
+  background-color: var(--color);
+}
+// .O_Footer {
+//   display: flex;
+//   background-color: white;
+//   height: 100vh;
+// }
+.A_Text {
+  font-family: 'Suisse Intl';
+  color: white;
+}
+.O_NavAndProjects {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.C_Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31vw;
+  position: sticky;
+  top: var(--headerHeight);
+  height: calc(100vh - var(--headerHeight));
+  padding-bottom: 24px;
+}
+.W_Links {
+  display: flex;
+  flex-direction: column;
+}
+.W_Desciption {
+  background-color: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .M_Title {
+    justify-content: center;
+    align-self: center;
   }
-  video {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  header {
-    display: grid;
-    margin-bottom: 6vw;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    margin-top: 2vw;
-    #phoneHeader {
-      display: none;
-    }
-    div {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 18px;
-      &:nth-of-type(2) {
-        margin-left: 3vw;
-        justify-content: space-between;
-        h3 {
-          font-size: 2.2vw;
-          line-height: 2.5vw;
-          span {
-            font-style: italic;
-          }
-        }
-      }
-      picture {
-        img {
-          &:nth-of-type(1) {
-            max-width: 100%;
-          }
-        }
-        &:nth-of-type(2) {
-          display: flex;
-          width: 100%;
-          height: fit-content;
-          align-items: flex-end;
-          justify-content: flex-end;
-          p {
-            margin-right: 2vw;
-          }
-          img {
-            max-width: 30%;
-            object-fit: fill;
-          }
-        }
-      }
-    }
-  }
-  main {
-    display: grid;
-    grid-template-columns: 65vw 35vw;
-    grid-template-rows: auto;
-    grid-template-areas: 'screen nav';
-    // width: 65vw;
-    section {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 18px;
-      a {
-        width: 100%;
-        &.fullSize {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-start: 1;
-          grid-row-end: 3;
-          max-height: 37vw;
-        }
-        &.vertical {
-          grid-column-start: 2;
-          grid-column-end: 3;
-          grid-row-start: 1;
-          grid-row-end: 3;
-          max-height: 47vw;
-          img {
-            height: 100%;
-          }
-        }
-        &.verticalLeft {
-          grid-column-start: 1;
-          grid-column-end: 2;
-          grid-row-start: 1;
-          grid-row-end: 3;
-          max-height: 47vw;
-        }
-        &.bottom {
-          grid-row-start: 2;
-          grid-row-end: 3;
-        }
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-          border-radius: 24px;
-          border: 1px solid rgba(0, 0, 0, 0.217);
-          transition: all 0.2s ease-in-out;
-        }
-        video {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 24px;
-          border: 1px solid rgba(0, 0, 0, 0.217);
-          transition: all 0.2s ease-in-out;
-        }
-        img:hover {
-          filter: blur(10px);
-          filter: brightness(70%);
-          cursor: none;
-        }
-        video:hover {
-          filter: blur(10px);
-          filter: brightness(70%);
-          cursor: none;
-        }
-      }
-    }
-  }
-  nav {
-    justify-self: center;
-    position: sticky;
-    top: 3vw;
-    transition: all 0.6s;
-    grid-area: nav;
-    height: fit-content;
-    margin-top: -25vw;
-    ul {
-      &:nth-of-type(2) {
-        li {
-          display: flex;
-          flex-direction: column;
-          align-items: end;
-          h1 {
-            a {
-              color: #3a71ff;
-            }
-          }
-        }
-        margin-top: 5vw;
-      }
-    }
-    h1 {
-      font-size: 3.8vw;
+}
+.M_Info {
+  font-family: helvetica;
+  position: relative;
+  width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px;
+  &:hover {
+    background-color: white;
+    color: black;
+    .A_Text {
+      color: black;
     }
   }
 }
-@media all and (max-width: 900px) {
-  body.main {
-    width: calc(100% - 44px);
-    main {
-      display: flex;
-      flex-direction: column;
-      nav {
-        display: none;
-      }
-      div {
-        grid-area: screen;
-        section {
-          display: flex;
-          flex-direction: column;
-          a {
-            max-height: none;
-            &.verticalLeft {
-              max-height: none;
-            }
-            &.vertical {
-              max-height: none;
-            }
-            &.fullSize {
-              max-height: none;
-            }
-          }
-        }
-      }
-      header {
-        margin-bottom: 10vw;
-        #phoneHeader {
-          z-index: 1000;
-          display: none;
-          mix-blend-mode: difference;
-          display: flex;
-          position: fixed;
-          justify-content: space-between;
-          width: calc(100% - 55px);
-          top: 16px;
-          left: 50%;
-          transform: translateX(-50%);
-          a {
-            width: fit-content;
-            color: white;
-            text-decoration: underline;
-          }
-          h1 {
-            z-index: 1000;
-            color: white;
-          }
-        }
-        div {
-          display: none;
-        }
-      }
-    }
+.W_Sub {
+  justify-content: flex-end;
+  align-self: end;
+  position: relative;
+  width: 70%;
+}
+.M_InfoAbout {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px;
+  .A_Text {
+    line-height: 150%;
+  }
+}
+.C_SelectedWorks {
+  padding-top: 36px;
+  width: calc(100vw - 31vw);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 24px;
+  &.W_ProjectLayout {
+    padding-top: 0;
+  }
+}
+.W_FourByFourGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+  // grid-template-rows: auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'UpperLeft UpperRight' 'BottomLeft BottomRight';
+  img {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    object-fit: cover;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+.A_VerticalLeft {
+  max-height: 47vw;
+  background-color: white;
+  // max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  grid-area: UpperLeft / UpperLeft / BottomLeft / BottomLeft;
+  overflow: hidden;
+}
+.A_VerticalRight {
+  max-height: 47vw;
+  background-color: white;
+  max-width: 100%;
+  display: flex;
+  grid-area: UpperRight / UpperRight / BottomRight / BottomRight;
+  overflow: hidden;
+}
+.A_BottomRight {
+  background-color: white;
+  max-height: 100%;
+  max-width: 100%;
+  grid-area: BottomRight;
+  overflow: hidden;
+}
+.A_BottomLeft {
+  background-color: white;
+  max-height: 100%;
+  max-width: 100%;
+  grid-area: BottomLeft;
+  overflow: hidden;
+}
+.A_UpperLeft {
+  background-color: white;
+  max-height: 100%;
+  max-width: 100%;
+  grid-area: UpperLeft;
+  overflow: hidden;
+}
+.A_UpperRight {
+  background-color: white;
+  max-height: 100%;
+  max-width: 100%;
+  grid-area: UpperRight;
+  overflow: hidden;
+}
+.A_FullScreen {
+  // background-color: white;
+  max-height: 100%;
+  max-width: 100%;
+  grid-area: UpperLeft/BottomLeft/BottomLeft/BottomRight;
+  overflow: hidden;
+}
+.U_Hidden {
+  display: none;
+}
+.U_Active {
+  background-color: white;
+  color: black;
+  .A_Text {
+    color: black;
   }
 }
