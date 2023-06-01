@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
   const trigger = document.getElementsByTagName('body')[0]
   const cursor = document.getElementById('cursor')
   const triggerZone = document.getElementsByTagName('img')
