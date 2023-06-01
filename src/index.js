@@ -1,6 +1,5 @@
 import './index.css'
 document.addEventListener('DOMContentLoaded', () => {
-  let infoItems = document.querySelectorAll('.M_Info')
   console.log('hi')
   function createArrayById(dataIdValue, clickedElement) {
     let elements = document.querySelectorAll(
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return newArray
   }
-  infoItems.forEach((element) => {
+  document.querySelectorAll('.M_Info').forEach((element) => {
     element.addEventListener('click', (ars) => {
       event.preventDefault()
       console.log(ars.target.href)
@@ -33,5 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 250 * others.length)
     })
   })
-  console.log('hi')
 })

@@ -75,6 +75,24 @@ body {
     }
   }
 }
+.M_InfoT {
+  font-family: helvetica;
+  position: relative;
+  width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px;
+  &:hover {
+    background-color: white;
+    color: black;
+    .A_Text {
+      color: black;
+    }
+  }
+}
 .W_Sub {
   justify-content: flex-end;
   align-self: end;
