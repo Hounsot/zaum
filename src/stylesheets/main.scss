@@ -8,6 +8,7 @@ body {
   padding: 0px 24px;
 }
 .O_Header {
+  z-index: 999999;
   height: var(--headerHeight);
   width: 100%;
   display: flex;
