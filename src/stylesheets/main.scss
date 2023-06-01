@@ -25,7 +25,7 @@ body {
 //   height: 100vh;
 // }
 .A_Text {
-  font-family: 'Suisse Intl';
+  font-family: 'PP_Mori', sans-serif;
   color: white;
 }
 .O_NavAndProjects {
@@ -58,7 +58,7 @@ body {
   }
 }
 .M_Info {
-  font-family: helvetica;
+  font-family: 'PP_Mori', sans-serif;
   position: relative;
   width: 100%;
   height: var(--headerHeight);
@@ -67,16 +67,19 @@ body {
   color: white;
   border-bottom: 1px solid white;
   padding: 10px 0 10px;
+  white-space: nowrap;
   &:hover {
     background-color: white;
     color: black;
     .A_Text {
+      pointer-events: none;
+      white-space: nowrap;
       color: black;
     }
   }
 }
 .M_InfoT {
-  font-family: helvetica;
+  font-family: 'PP_Mori', sans-serif;
   position: relative;
   width: 100%;
   height: var(--headerHeight);
@@ -85,13 +88,14 @@ body {
   color: white;
   border-bottom: 1px solid white;
   padding: 10px 0 10px;
-  &:hover {
-    background-color: white;
-    color: black;
-    .A_Text {
-      color: black;
-    }
-  }
+  // &:hover {
+  //   background-color: white;
+  //   color: black;
+  //   .A_Text {
+  //     white-space: nowrap;
+  //     color: black;
+  //   }
+  // }
 }
 .W_Sub {
   justify-content: flex-end;
