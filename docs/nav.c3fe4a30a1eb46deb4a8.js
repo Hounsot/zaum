@@ -1,6 +1,6 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
-window.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener('DOMContentLoaded', function () {
   var trigger = document.getElementsByTagName('body')[0];
   var cursor = document.getElementById('cursor');
   var triggerZone = document.getElementsByTagName('img');

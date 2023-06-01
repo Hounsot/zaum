@@ -3,7 +3,6 @@
 var __webpack_exports__ = {};
 
 document.addEventListener('DOMContentLoaded', function () {
-  var infoItems = document.querySelectorAll('.M_Info');
   console.log('hi');
   function createArrayById(dataIdValue, clickedElement) {
     var elements = document.querySelectorAll("[data-link='" + dataIdValue + "']");
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     return newArray;
   }
-  infoItems.forEach(function (element) {
+  document.querySelectorAll('.M_Info').forEach(function (element) {
     element.addEventListener('click', function (ars) {
       event.preventDefault();
       console.log(ars.target.href);
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 250 * others.length);
     });
   });
-  console.log('hi');
 });
 /******/ })()
 ;
