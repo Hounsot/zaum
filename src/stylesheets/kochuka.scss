@@ -1,50 +1,175 @@
 * {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
   max-width: 100vw;
-  max-height: 100vh;
-  body {
-    max-width: 100vw;
-    max-height: 100vh;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    p {
-      white-space: nowrap;
-      text-transform: uppercase;
-      color: #cacaca;
-      mix-blend-mode: difference;
-      font-family: 'CoFo Sans';
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.A_Intro {
+  margin-bottom: 20px;
+}
+.SO_PortfolioMainPage {
+  padding: 58px 60px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.O_TextAndAnimation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.C_LogoAndNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+}
+.W_LogoAndInfo {
+  display: flex;
+  flex-direction: column;
+  p {
+  }
+}
+p,
+a {
+  white-space: nowrap;
+  font-family: 'PP Mori';
+}
+p {
+  font-size: 50px;
+}
+a {
+  font-size: 30px;
+}
+.A_Link {
+  color: white;
+  background: #2e2e2e;
+  display: flex;
+  padding: 11px 15px 8px 15px;
+  justify-content: center;
+  align-items: center;
+}
+.C_Navigation {
+  display: flex;
+  flex-direction: row;
+  height: 49px;
+  width: 644px;
+  gap: 40px;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+.A_Gray {
+  color: #d1d1d1;
+  opacity: 0.6;
+  mix-blend-mode: difference;
+  margin-bottom: 40px;
+}
+.W_ContactsView {
+  .W_LogoAndInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.A_Pfp {
+  width: 373px;
+  height: 512px;
+  object-fit: cover;
+}
+.A_BurgerMenu {
+  background-color: black;
+  height: 4px;
+  width: 37px;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  &.is_active {
+    background-color: transparent;
+    &:after {
+      background-color: white;
+      transform: translateY(0);
+      transform: rotate(45deg);
     }
-    .SO_PortfolioMainPage {
-      max-width: 100vw;
-      display: grid;
-      grid-template-areas: 'main';
-      .O_TextAndAnimation {
-        max-width: 100vw;
-        padding: 36px 58px;
-        grid-area: main;
-        .W_LogoAndInfo {
-          max-width: 100vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          p {
-            max-width: 100vw;
-            font-weight: 700;
-            font-size: 45px;
-            &.A_SecondText {
-              margin-top: 15px;
-              font-size: 24px;
-            }
-          }
-          .M_LogoAndLink {
-            max-width: 100vw;
-          }
-        }
-      }
-      .A_Background {
-        grid-area: main;
-        z-index: -1;
-      }
+    &:before {
+      background-color: white;
+      transform: translateY(0);
+      transform: rotate(-45deg);
+    }
+  }
+  &:after,
+  &:before {
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    height: 4px;
+    width: 37px;
+    border-radius: 100px;
+    content: '';
+  }
+  &:after {
+    &.is_active {
+      transform: rotate(45deg);
+    }
+    transform: translateY(10px);
+  }
+  &:before {
+    &.is_active {
+      transform: rotate(45deg);
+    }
+    transform: translateY(-10px);
+  }
+}
+.U_BurgerHandler {
+  display: none;
+  height: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 1440px) {
+  p {
+    font-size: 34px;
+  }
+  a {
+    font-size: 30px;
+  }
+  .W_LogoAndInfo {
+    width: 360px;
+    flex-wrap: wrap;
+  }
+  .U_BurgerHandler {
+    display: flex;
+  }
+  .C_Navigation {
+    justify-content: flex-end;
+    height: 49px;
+    &.is_active {
+      background-color: #2e2e2e;
+    }
+    .A_Link {
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 390px) {
+  p {
+    font-size: 26px;
+  }
+  a {
+    font-size: 20px;
+  }
+  .C_Navigation {
+    &.is_active {
+      background-color: #2e2e2e;
     }
   }
 }
