@@ -11,7 +11,8 @@ module.exports = {
     index: './src/index.js',
     projects: './src/projects.js',
     nav: './src/main.js',
-    zagum: './src/zagum.js'
+    zagum: './src/zagum.js',
+    zagumPortfolio: './src/zagumPortfolio.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -143,6 +144,11 @@ module.exports = {
       template: './src/zagum.html',
       filename: './zagum.html',
       chunks: ['zagum']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/zagumLibrary.html',
+      filename: './zagumLibrary.html',
+      chunks: ['zagumPortfolio']
     })
 
     // Article
