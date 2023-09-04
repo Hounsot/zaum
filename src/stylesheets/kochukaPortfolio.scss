@@ -16,6 +16,35 @@ a {
   font-family: 'PP Mori';
   font-size: 30px;
 }
+.MobileOnly {
+  display: none;
+}
+.A_ProjectScreencast {
+  color: #cacaca;
+  text-decoration: underline;
+  font-family: 'PP Mori';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.A_ProjectScreencast2 {
+  color: #cacaca;
+  font-family: 'PP Mori';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.U_WithSubText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: -10px;
+  .A_ProjectName {
+    margin-bottom: 0;
+  }
+}
 .AAAA {
   overflow: hidden;
   display: flex;
@@ -39,7 +68,7 @@ a {
   width: 100%;
   margin-bottom: 110px;
   &.is_active {
-    filter: blur(45px);
+    // filter: blur(45px);
   }
 }
 .A_Link {
@@ -76,6 +105,7 @@ a {
   max-width: 1920px;
   width: 100%;
   padding: 58px 60px;
+  padding-bottom: 0px;
 }
 .C_ProjectPreview {
   max-width: 100%;
@@ -95,6 +125,12 @@ a {
   font-style: normal;
   font-weight: 600;
   margin-bottom: 40px;
+}
+.KursivPosters {
+  object-fit: cover;
+  img:nth-child(3) {
+    grid-area: 1/3/2/5;
+  }
 }
 .Decibel {
   img:nth-child(1) {
@@ -136,6 +172,82 @@ a {
   }
   img:nth-child(5) {
     grid-area: 2/4/3/7;
+  }
+}
+.tactile {
+  img:nth-child(1) {
+    grid-area: 1/1/2/4;
+  }
+  img:nth-child(2) {
+    grid-area: 1/4/2/7;
+  }
+  img:nth-child(3) {
+    grid-area: 2/1/3/2;
+  }
+  img:nth-child(4) {
+    grid-area: 2/2/3/5;
+  }
+  img:nth-child(5) {
+    grid-area: 2/5/3/7;
+  }
+  img:nth-child(6) {
+    grid-area: 3/1/4/4;
+  }
+  img:nth-child(7) {
+    grid-area: 3/4/4/7;
+  }
+}
+.bosch {
+  img:nth-child(1) {
+    grid-area: 1/1/2/3;
+  }
+  img:nth-child(2) {
+    grid-area: 1/3/2/6;
+  }
+  img:nth-child(3) {
+    grid-area: 1/6/2/7;
+  }
+  img:nth-child(4) {
+    grid-area: 2/1/3/4;
+  }
+  img:nth-child(5) {
+    grid-area: 2/4/3/7;
+  }
+}
+.promo {
+  img:nth-child(1) {
+    grid-area: 1/1/2/4;
+  }
+  img:nth-child(2) {
+    grid-area: 1/4/2/5;
+  }
+  img:nth-child(3) {
+    grid-area: 1/5/2/7;
+  }
+  img:nth-child(4) {
+    grid-area: 2/1/3/3;
+  }
+  img:nth-child(5) {
+    grid-area: 2/3/3/6;
+  }
+  img:nth-child(6) {
+    grid-area: 2/6/3/7;
+  }
+}
+.clip {
+  img:nth-child(1) {
+    grid-area: 1/1/2/3;
+  }
+  img:nth-child(2) {
+    grid-area: 1/3/2/5;
+  }
+  img:nth-child(3) {
+    grid-area: 1/5/2/7;
+  }
+}
+.Shop {
+  img:nth-child(1) {
+    grid-area: 1/1/2/3;
   }
 }
 .Bar1 {
@@ -320,7 +432,20 @@ a {
   align-items: center;
 }
 @media all and (max-width: 1200px) {
+  .O_Project {
+    &.is_active {
+      filter: blur(45px);
+    }
+  }
+  .KursivPosters {
+    img:nth-child(3) {
+      grid-area: auto;
+      object-fit: cover;
+    }
+  }
+
   .AAAA {
+    z-index: 9999;
     &.is_active {
       padding-top: 23px;
       width: 100%;
@@ -349,6 +474,7 @@ a {
     display: flex;
   }
   .C_Navigation {
+    z-index: 99999;
     height: 39px;
     &.is_active {
       background-color: #2e2e2e;
@@ -356,6 +482,80 @@ a {
   }
 }
 @media all and (max-width: 1000px) {
+  .bosch {
+    img:nth-child(1) {
+      grid-area: 2/1/3/3;
+    }
+    img:nth-child(2) {
+      grid-area: 1/1/2/4;
+    }
+    img:nth-child(3) {
+      grid-area: 2/3/3/4;
+    }
+    img:nth-child(4) {
+      grid-area: 3/1/4/4;
+    }
+    img:nth-child(5) {
+      grid-area: 4/1/5/4;
+    }
+  }
+  .promo {
+    img:nth-child(1) {
+      grid-area: 1/1/2/4;
+    }
+    img:nth-child(2) {
+      grid-area: 2/1/3/2;
+    }
+    img:nth-child(3) {
+      grid-area: 2/2/3/4;
+    }
+    img:nth-child(4) {
+      grid-area: 4/1/5/3;
+    }
+    img:nth-child(5) {
+      grid-area: 3/1/4/4;
+    }
+    img:nth-child(6) {
+      grid-area: 4/3/5/4;
+    }
+  }
+  .clip {
+    img:nth-child(1) {
+      grid-area: 1/1/2/4;
+    }
+    img:nth-child(2) {
+      display: none;
+      grid-area: 1/2/2/4;
+    }
+    img:nth-child(3) {
+      display: none;
+      grid-area: 3/1/4/4;
+    }
+  }
+
+  .tactile {
+    img:nth-child(1) {
+      grid-area: 1/1/2/4;
+    }
+    img:nth-child(2) {
+      grid-area: 2/1/3/4;
+    }
+    img:nth-child(3) {
+      grid-area: 3/1/4/2;
+    }
+    img:nth-child(4) {
+      grid-area: 4/1/5/4;
+    }
+    img:nth-child(5) {
+      grid-area: 3/2/4/4;
+    }
+    img:nth-child(6) {
+      grid-area: 5/1/6/4;
+    }
+    img:nth-child(7) {
+      grid-area: 6/1/7/4;
+    }
+  }
   .Kursiv {
     img:nth-child(1) {
       grid-area: 1/1/2/4;
@@ -465,6 +665,9 @@ a {
       grid-area: 1/1/2/4;
     }
   }
+  .A_Link {
+    font-size: 39px;
+  }
 
   .Decibel {
     img:nth-child(1) {
@@ -481,6 +684,8 @@ a {
     }
     img:nth-child(5) {
       grid-area: 3/1/4/2;
+      object-position: -25vw;
+      object-fit: cover;
     }
     img:nth-child(6) {
       grid-area: 6/1/7/3;
@@ -496,13 +701,15 @@ a {
     max-width: 1920px;
     width: 100%;
     padding: 55px 28px;
+    padding-bottom: 0px;
   }
   .C_ProjectPreview {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
+    row-gap: 20px;
   }
   .A_Link {
-    font-size: 20px;
+    font-size: 39px;
   }
   .C_Links {
     gap: 12px;
@@ -518,11 +725,11 @@ a {
     &.is_active {
       padding: 10px 23px 23px;
       width: 100%;
-      height: 280px;
+      height: 360px;
       background-color: #2e2e2e;
       .U_BurgerHandler {
         width: 50px;
-        min-height: 39px;
+        min-height: 50px;
       }
       .A_BurgerMenu {
         height: 3px;
@@ -551,18 +758,80 @@ a {
   }
 }
 @media all and (max-width: 500px) {
+  .MobileOnly {
+    display: block;
+  }
+
   .C_ProjectPreview {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
   }
+  .bosch {
+    img:nth-child(1) {
+      grid-area: 1/1/2/3;
+    }
+    img:nth-child(2) {
+      grid-area: 2/1/3/3;
+    }
+    img:nth-child(3) {
+      grid-area: 5/1/6/2;
+    }
+    img:nth-child(4) {
+      grid-area: 3/1/4/3;
+    }
+    img:nth-child(5) {
+      grid-area: 4/1/5/3;
+    }
+  }
+  .promo {
+    img:nth-child(1) {
+      grid-area: 1/1/2/3;
+    }
+    img:nth-child(2) {
+      grid-area: 5/1/6/2;
+    }
+    img:nth-child(3) {
+      grid-area: 2/1/3/3;
+    }
+    img:nth-child(4) {
+      grid-area: 3/1/4/3;
+    }
+    img:nth-child(5) {
+      grid-area: 4/1/5/3;
+    }
+    img:nth-child(6) {
+      grid-area: 5/2/6/3;
+    }
+  }
+
+  .O_Project {
+    margin-bottom: 50px;
+  }
   .A_ProjectPiece {
     object-fit: cover;
   }
+  .BarPosters2 {
+    img:nth-child(8) {
+      grid-area: 4/1/5/2;
+    }
+  }
   .A_ProjectName {
-    font-size: 25px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    line-height: 120%;
+  }
+  .C_Navigation {
+    margin-bottom: 60px;
+  }
+  .AAAA {
+    &.is_active {
+      height: 315px;
+    }
+  }
+  .A_Link {
+    font-size: 29px;
   }
   .Kursiv {
     img:nth-child(1) {
@@ -587,19 +856,19 @@ a {
       grid-area: 5/1/6/3;
     }
     img:nth-child(8) {
-      grid-area: 6/2/7/3;
+      grid-area: 7/2/8/3;
     }
     img:nth-child(9) {
-      grid-area: 6/1/7/2;
+      grid-area: 6/1/7/3;
     }
     img:nth-child(10) {
       grid-area: 7/1/8/2;
     }
     img:nth-child(11) {
-      grid-area: 7/2/8/3;
+      grid-area: 8/1/9/3;
     }
     img:nth-child(12) {
-      grid-area: 8/1/9/3;
+      grid-area: 9/1/10/3;
     }
   }
   .Zeitgeist {
@@ -630,19 +899,19 @@ a {
       grid-area: 1/1/2/2;
     }
     img:nth-child(4) {
-      grid-area: 3/2/4/3;
+      grid-area: 7/1/8/2;
     }
     img:nth-child(5) {
       grid-area: 4/1/5/3;
     }
     img:nth-child(6) {
-      grid-area: 3/1/4/2;
+      grid-area: 3/1/4/3;
     }
     img:nth-child(7) {
-      grid-area: 6/2/7/3;
+      grid-area: 6/1/7/3;
     }
     img:nth-child(8) {
-      grid-area: 6/1/7/2;
+      grid-area: 7/2/8/3;
     }
     img:nth-child(9) {
       grid-area: 5/1/6/3;
@@ -673,31 +942,32 @@ a {
       grid-area: 1/1/2/3;
     }
   }
-
   .Decibel {
     img:nth-child(1) {
-      grid-area: 1/1/2/2;
+      grid-area: 1/1/2/3;
     }
     img:nth-child(2) {
-      grid-area: 1/2/2/3;
+      grid-area: 8/1/9/2;
     }
     img:nth-child(3) {
       grid-area: 2/1/3/3;
     }
     img:nth-child(4) {
-      grid-area: 3/2/4/3;
+      grid-area: 4/1/5/3;
     }
     img:nth-child(5) {
-      grid-area: 3/1/4/2;
+      grid-area: 3/1/4/3;
+      object-fit: contain;
+      object-position: 0;
     }
     img:nth-child(6) {
       grid-area: 6/1/7/3;
     }
     img:nth-child(7) {
-      grid-area: 4/1/5/3;
+      grid-area: 5/1/6/3;
     }
     img:nth-child(8) {
-      grid-area: 5/1/6/3;
+      grid-area: 7/1/8/3;
     }
   }
 }

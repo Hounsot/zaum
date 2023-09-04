@@ -149,6 +149,21 @@ module.exports = {
       template: './src/zagumLibrary.html',
       filename: './zagumLibrary.html',
       chunks: ['zagumPortfolio']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/zagumSites.html',
+      filename: './zagumSites.html',
+      chunks: ['zagumPortfolio']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/zagumPosters.html',
+      filename: './zagumPosters.html',
+      chunks: ['zagumPortfolio']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/shop.html',
+      filename: './shop.html',
+      chunks: ['zagumPortfolio']
     })
 
     // Article

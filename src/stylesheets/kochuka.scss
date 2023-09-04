@@ -17,6 +17,53 @@ body {
   width: 100%;
   height: 100%;
 }
+.AAAA {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 0 23px 23px;
+  justify-content: space-between;
+}
+.C_Navigation {
+  padding: 0px 60px;
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 111px;
+}
+.A_Link {
+  color: white;
+  background: #2e2e2e;
+  display: flex;
+  padding: 11px 15px 8px 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.C_Links {
+  display: flex;
+  flex-direction: row;
+  height: 49px;
+  width: 644px;
+  gap: 40px;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  // transition: all 0.3s ease-in-out;
+  &.is_active {
+    background-color: #2e2e2e;
+  }
+}
+
+.MobileOnly {
+  display: none;
+}
 .O_TextAndAnimation {
   width: 100%;
   display: flex;
@@ -36,10 +83,12 @@ body {
   p {
   }
 }
+
 p,
 a {
   white-space: nowrap;
   font-family: 'PP Mori';
+  font-weight: 500;
 }
 p {
   font-size: 50px;
@@ -54,17 +103,6 @@ a {
   padding: 11px 15px 8px 15px;
   justify-content: center;
   align-items: center;
-}
-.C_Navigation {
-  display: flex;
-  flex-direction: row;
-  height: 49px;
-  width: 644px;
-  gap: 40px;
-  height: fit-content;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s ease-in-out;
 }
 .A_Gray {
   color: #d1d1d1;
@@ -90,24 +128,25 @@ a {
   height: 4px;
   width: 37px;
   border-radius: 100px;
-  transition: all 0.3s ease-in-out;
+  // transition: all 0.3s ease-in-out;
   &.is_active {
     background-color: transparent;
     &:after {
-      background-color: white;
+      // background-color: white;
       transform: translateY(0);
       transform: rotate(45deg);
     }
     &:before {
-      background-color: white;
+      // background-color: white;
       transform: translateY(0);
       transform: rotate(-45deg);
     }
   }
+
   &:after,
   &:before {
     background-color: black;
-    transition: all 0.3s ease-in-out;
+    // transition: all 0.3s ease-in-out;
     position: absolute;
     height: 4px;
     width: 37px;
@@ -135,6 +174,51 @@ a {
   align-items: center;
 }
 @media all and (max-width: 1440px) {
+  .C_Navigation {
+    z-index: 99999;
+    height: 39px;
+    &.is_active {
+      background-color: #2e2e2e;
+    }
+  }
+  .C_Links {
+    .A_Link {
+      background-color: white;
+      color: #2e2e2e;
+    }
+  }
+  .SO_PortfolioMainPage {
+    &.is_active {
+      filter: blur(45px);
+    }
+  }
+
+  .AAAA {
+    z-index: 9999;
+    &.is_active {
+      padding-top: 23px;
+      width: 100%;
+      height: 180px;
+      background-color: #2e2e2e;
+    }
+  }
+  .U_BurgerHandler {
+    width: 60px;
+    background-color: white;
+    min-height: 49px;
+    display: flex;
+  }
+  .C_Links {
+    display: flex;
+  }
+  .C_Navigation {
+    z-index: 99999;
+    height: 39px;
+    &.is_active {
+      background-color: #2e2e2e;
+    }
+  }
+
   p {
     font-size: 34px;
   }
@@ -144,32 +228,69 @@ a {
   .W_LogoAndInfo {
     width: 360px;
     flex-wrap: wrap;
-  }
-  .U_BurgerHandler {
-    display: flex;
-  }
-  .C_Navigation {
-    justify-content: flex-end;
-    height: 49px;
     &.is_active {
-      background-color: #2e2e2e;
-    }
-    .A_Link {
-      display: none;
+      filter: blur(45px);
     }
   }
 }
 
-@media all and (max-width: 390px) {
+@media all and (max-width: 800px) {
+  .C_Navigation {
+    padding: 0px 28px;
+  }
+  .SO_PortfolioMainPage {
+    padding: 55px 28px;
+  }
+  .C_Links {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    gap: 12px;
+  }
+  .A_Link {
+    font-size: 29px;
+  }
+  .AAAA {
+    padding: 0;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-right: 20px;
+    &.is_active {
+      padding: 10px 23px 23px;
+      width: 100%;
+      height: 315px;
+      background-color: #2e2e2e;
+      .U_BurgerHandler {
+        width: 50px;
+        min-height: 50px;
+      }
+      .A_BurgerMenu {
+        height: 3px;
+        &::after {
+          height: 3px;
+        }
+        &::before {
+          height: 3px;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 640px) {
   p {
     font-size: 26px;
   }
   a {
     font-size: 20px;
   }
-  .C_Navigation {
-    &.is_active {
-      background-color: #2e2e2e;
-    }
+  .MobileOnly {
+    display: block;
+  }
+  .DesktopOnly {
+    display: none;
+  }
+  .A_Pfp {
+    width: 183px;
+    height: 252px;
   }
 }
