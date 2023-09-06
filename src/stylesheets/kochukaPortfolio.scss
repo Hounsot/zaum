@@ -833,6 +833,11 @@ a {
   .A_Link {
     font-size: 29px;
   }
+  * {
+    white-space: nowrap;
+    font-family: 'PP_Mori';
+    font-size: 30px;
+  }
   .Kursiv {
     img:nth-child(1) {
       grid-area: 1/1/2/3;
